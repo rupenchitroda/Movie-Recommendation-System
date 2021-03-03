@@ -106,9 +106,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
+				{% if count > 0 %}
 				<div class="topbar-filter fw">
 					<p>Found <span>{{ count }}</span> in total</p>
                 </div>
+				{% else %}
+				{% endif %}
 				<div class="flex-wrap-movielist mv-grid-fw">
                     {% block content %}
                     {% for imdb,poster,rating,names in data %}
@@ -143,6 +146,7 @@
 			source: '{% url 'autocomplete' %}',
 			autoFocus:true,
 			delay:200,
+			minLength:4,
 			}
 			
 		);

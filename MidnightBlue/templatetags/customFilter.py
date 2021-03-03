@@ -38,7 +38,7 @@ def seperateGenre(value, arg):
         
     elif argu<=res and arg=="5":
         result = value.split(' ', 5)
-        result = "<span class='black'><a href='#'>" + result[4] + "</a></span>"
+        result = "<span class='blue'><a href='#'>" + result[4] + "</a></span>"
         return mark_safe(result)
     
     elif argu<=res and arg=="6":
