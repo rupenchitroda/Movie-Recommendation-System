@@ -59,7 +59,6 @@ def autocomplete(request):
         titles = list()
         for product in qs:
             titles.append(product.original_title)
-        # titles = [product.title for product in qs]
         return JsonResponse(titles, safe=False)
     return render(request, 'test_search.html')
 
